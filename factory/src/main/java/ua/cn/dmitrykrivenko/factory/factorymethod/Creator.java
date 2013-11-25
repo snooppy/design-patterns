@@ -6,6 +6,6 @@ package ua.cn.dmitrykrivenko.factory.factorymethod;
  */
 public abstract class Creator {
 
-    //Factory mathod
+    //Factory method
     public abstract Product createProduct(String productType);
 }
