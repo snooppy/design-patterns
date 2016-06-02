@@ -2,10 +2,11 @@ package ua.cn.dmitrykrivenko.factory;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ua.cn.dmitrykrivenko.factory.factorymethod.ConcreteCreatorA;
-import ua.cn.dmitrykrivenko.factory.factorymethod.ConcreteCreatorB;
-import ua.cn.dmitrykrivenko.factory.factorymethod.Creator;
-import ua.cn.dmitrykrivenko.factory.factorymethod.Product;
+
+import ua.cn.dmitrykrivenko.factory.factorymethod.FileWriter;
+import ua.cn.dmitrykrivenko.factory.factorymethod.Writer;
+import ua.cn.dmitrykrivenko.factory.factorymethod.WriterFactory;
+import ua.cn.dmitrykrivenko.factory.factorymethod.XmlWriter;
 
 /**
  *
@@ -15,16 +16,12 @@ public class FactoryMethodTest {
 
     @Test
     public void testFactoryMethod() {
-        Creator cA = new ConcreteCreatorA();
-        Creator cB = new ConcreteCreatorB();
+        WriterFactory factory = new WriterFactory();
 
-        Product productA = cA.createProduct("Product A");
-        Product productB = cB.createProduct("Product B");
+        Writer xmlWriter = factory.getWriter("XML");
+        Writer fileWriter = factory.getWriter("FILE");
 
-        System.out.println(productA.getName());
-        Assert.assertEquals("Concrete Product A", productA.getName());
-
-        System.out.println(productB.getName());
-        Assert.assertEquals("Concrete Product B", productB.getName());
+        Assert.assertTrue(xmlWriter instanceof XmlWriter);
+        Assert.assertTrue(fileWriter instanceof FileWriter);
     }
 }

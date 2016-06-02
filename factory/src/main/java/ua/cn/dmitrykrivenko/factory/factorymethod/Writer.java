@@ -4,9 +4,7 @@ package ua.cn.dmitrykrivenko.factory.factorymethod;
  *
  * @author Dmitry Krivenko <dmitrykrivenko@gmail.com>
  */
-public class ConcreteProductB extends Product {
+public interface Writer {
 
-    public ConcreteProductB(String pName) {
-        super(pName);
-    }
+	void write(String context);
 }
