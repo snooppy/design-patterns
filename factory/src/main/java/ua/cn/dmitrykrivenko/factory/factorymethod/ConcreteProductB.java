@@ -7,6 +7,6 @@ package ua.cn.dmitrykrivenko.factory.factorymethod;
 public class ConcreteProductB extends Product {
 
     public ConcreteProductB(String pName) {
-        setName(pName);
+        super(pName);
     }
 }

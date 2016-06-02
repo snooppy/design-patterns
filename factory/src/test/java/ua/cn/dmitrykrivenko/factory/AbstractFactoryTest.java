@@ -3,8 +3,7 @@ package ua.cn.dmitrykrivenko.factory;
 import org.junit.Test;
 import org.junit.Assert;
 import ua.cn.dmitrykrivenko.factory.abstractfactory.Client;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ConcreteClient1;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ConcreteClient2;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.ConcreteClient;
 import ua.cn.dmitrykrivenko.factory.abstractfactory.ConcreteFactory1;
 import ua.cn.dmitrykrivenko.factory.abstractfactory.ConcreteFactory2;
 import ua.cn.dmitrykrivenko.factory.abstractfactory.ProductA1;
@@ -20,14 +19,14 @@ public class AbstractFactoryTest {
 
     @Test
     public void testAbstractFactory() {
-        Client client1 = new ConcreteClient1(new ConcreteFactory1());
-        Client client2 = new ConcreteClient2(new ConcreteFactory2());
+        Client client1 = new ConcreteClient(new ConcreteFactory1());
+        Client client2 = new ConcreteClient(new ConcreteFactory2());
         client1.createProducts();
         client2.createProducts();
 
-        Assert.assertEquals(ProductA1.class, client1.getAbstractProductA().getClass());
-        Assert.assertEquals(ProductA2.class, client2.getAbstractProductA().getClass());
-        Assert.assertEquals(ProductB1.class, client1.getAbstractProductB().getClass());
-        Assert.assertEquals(ProductB2.class, client2.getAbstractProductB().getClass());
+        Assert.assertTrue(client1.getAbstractProductA() instanceof ProductA1);
+        Assert.assertTrue(client2.getAbstractProductA() instanceof ProductA2);
+        Assert.assertTrue(client1.getAbstractProductB() instanceof ProductB1);
+        Assert.assertTrue(client2.getAbstractProductB() instanceof ProductB2);
     }
 }

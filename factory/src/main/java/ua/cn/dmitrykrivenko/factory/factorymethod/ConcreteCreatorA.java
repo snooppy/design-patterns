@@ -6,6 +6,7 @@ package ua.cn.dmitrykrivenko.factory.factorymethod;
  */
 public class ConcreteCreatorA extends Creator {
 
+    @Override
     public Product createProduct(String productType) {
         if (productType.equals("Product A")) {
             return new ConcreteProductB("Concrete Product A");

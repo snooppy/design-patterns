@@ -6,10 +6,10 @@ package ua.cn.dmitrykrivenko.factory.factorymethod;
  */
 public abstract class Product {
 
-    private String name;
+    private final String name;
 
-    public void  setName(String pName) {
-        name = pName;
+    public Product(String name) {
+        this.name = name;
     }
 
     public String getName() {

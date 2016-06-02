@@ -4,11 +4,11 @@ package ua.cn.dmitrykrivenko.factory.abstractfactory;
  *
  * @author Dmitry Krivenko <dmitrykrivenko@gmail.com>
  */
-public class ConcreteClient2 extends Client {
+public class ConcreteClient extends Client {
 
-    private AbstractFactory abstractFactory;
+    private final AbstractFactory abstractFactory;
 
-    public ConcreteClient2(AbstractFactory factory) {
+    public ConcreteClient(AbstractFactory factory) {
         abstractFactory = factory;
     }
 
