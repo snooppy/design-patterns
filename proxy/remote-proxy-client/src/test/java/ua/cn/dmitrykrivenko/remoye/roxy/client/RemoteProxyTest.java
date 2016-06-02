@@ -2,6 +2,7 @@ package ua.cn.dmitrykrivenko.remoye.roxy.client;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import ua.cn.dmitrykrivenko.remote.proxy.client.MyRemoteClient;
 
 /**
@@ -13,6 +14,6 @@ public class RemoteProxyTest {
     @Test
     public void testRemoteProxy() {
         MyRemoteClient client = new MyRemoteClient();
-        Assert.assertEquals(client.getHelloStringFromServer(), "Hello from Server!");
+        Assert.assertEquals("Hello from Server!", client.getHelloStringFromServer());
     }
 }

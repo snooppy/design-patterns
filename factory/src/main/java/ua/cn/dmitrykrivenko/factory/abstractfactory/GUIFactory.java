@@ -1,9 +1,14 @@
 package ua.cn.dmitrykrivenko.factory.abstractfactory;
 
 /**
+ * Abstract factory.
  *
  * @author Dmitry Krivenko <dmitrykrivenko@gmail.com>
  */
-public class ProductB1 implements AbstractProductB{
+public interface GUIFactory {
+	
+	Button createButton();
+	
+	Input creatInput();
 
 }

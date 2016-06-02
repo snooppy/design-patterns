@@ -1,9 +1,11 @@
 package ua.cn.dmitrykrivenko.factory.abstractfactory;
 
 /**
+ * Abstract product.
  *
  * @author Dmitry Krivenko <dmitrykrivenko@gmail.com>
  */
-public class ProductB2 implements AbstractProductB{
+public interface Input {
 
+	String getText();
 }

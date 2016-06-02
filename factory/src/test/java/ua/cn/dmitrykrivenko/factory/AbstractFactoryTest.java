@@ -1,15 +1,15 @@
 package ua.cn.dmitrykrivenko.factory;
 
-import org.junit.Test;
 import org.junit.Assert;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.Client;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ConcreteClient;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ConcreteFactory1;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ConcreteFactory2;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ProductA1;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ProductA2;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ProductB1;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.ProductB2;
+import org.junit.Test;
+
+import ua.cn.dmitrykrivenko.factory.abstractfactory.Application;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.OSXButton;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.OSXFactory;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.OSXInput;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.WinButton;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.WinFactory;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.WinInput;
 
 /**
  *
@@ -17,16 +17,16 @@ import ua.cn.dmitrykrivenko.factory.abstractfactory.ProductB2;
  */
 public class AbstractFactoryTest {
 
-    @Test
-    public void testAbstractFactory() {
-        Client client1 = new ConcreteClient(new ConcreteFactory1());
-        Client client2 = new ConcreteClient(new ConcreteFactory2());
-        client1.createProducts();
-        client2.createProducts();
+	@Test
+	public void testAbstractFactory() {
+		Application winApplication = new Application(new WinFactory());
+		Application osxApplication = new Application(new OSXFactory());
+		winApplication.createElements();
+		osxApplication.createElements();
 
-        Assert.assertTrue(client1.getAbstractProductA() instanceof ProductA1);
-        Assert.assertTrue(client2.getAbstractProductA() instanceof ProductA2);
-        Assert.assertTrue(client1.getAbstractProductB() instanceof ProductB1);
-        Assert.assertTrue(client2.getAbstractProductB() instanceof ProductB2);
-    }
+		Assert.assertTrue(winApplication.getButton() instanceof WinButton);
+		Assert.assertTrue(winApplication.getInput() instanceof WinInput);
+		Assert.assertTrue(osxApplication.getButton() instanceof OSXButton);
+		Assert.assertTrue(osxApplication.getInput() instanceof OSXInput);
+	}
 }
