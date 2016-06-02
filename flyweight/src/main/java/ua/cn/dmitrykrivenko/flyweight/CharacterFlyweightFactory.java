@@ -8,11 +8,11 @@ import java.util.HashMap;
  */
 public class CharacterFlyweightFactory {
 
-    private HashMap<Integer, EnglishCharacter> charactersPool = new HashMap<Integer, EnglishCharacter>();
+    private final HashMap<Integer, EnglishCharacter> charactersPool = new HashMap<>();
 
     public EnglishCharacter getCharacter(int characterCode) {
-        EnglishCharacter character = charactersPool.get(new Integer(characterCode));
-        if (null == character) {
+        EnglishCharacter character = charactersPool.get(characterCode);
+        if (character == null) {
             switch (characterCode) {
                 case 1: {
                     character = new CharacterA();
@@ -26,6 +26,8 @@ public class CharacterFlyweightFactory {
                     character = new CharacterC();
                     break;
                 }
+				default:
+					throw new IllegalArgumentException("Unsupported character code: "+characterCode);
             }
             charactersPool.put(characterCode, character);
         }
