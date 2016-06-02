@@ -7,7 +7,7 @@ package ua.cn.dmitrykrivenko.chain.of.responsibility;
 public class JsonParser extends Parser {
 
     public JsonParser(Parser successor) {
-        this.setNextSuccessor(successor);
+        super(successor);
     }
 
     @Override

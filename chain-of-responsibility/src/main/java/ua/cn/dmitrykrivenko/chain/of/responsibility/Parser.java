@@ -8,6 +8,13 @@ public class Parser {
 
     private Parser successor;
 
+	public Parser() {
+	}
+
+	public Parser(Parser successor) {
+		this.successor = successor;
+	}
+
     public boolean parse(String fileName) {
         if (getSuccessor() != null) {
             return getSuccessor().parse(fileName);
@@ -26,7 +33,4 @@ public class Parser {
         return successor;
     }
 
-    public void setNextSuccessor(Parser successor) {
-        this.successor = successor;
-    }
 }

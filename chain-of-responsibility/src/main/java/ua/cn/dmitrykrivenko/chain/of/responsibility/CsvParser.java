@@ -7,7 +7,7 @@ package ua.cn.dmitrykrivenko.chain.of.responsibility;
 public class CsvParser extends Parser {
 
     public CsvParser(Parser successor) {
-        this.setNextSuccessor(successor);
+        super(successor);
     }
 
     @Override

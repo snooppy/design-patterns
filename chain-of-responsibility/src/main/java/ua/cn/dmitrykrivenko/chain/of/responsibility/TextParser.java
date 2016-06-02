@@ -7,7 +7,7 @@ package ua.cn.dmitrykrivenko.chain.of.responsibility;
 public class TextParser extends Parser {
 
     public TextParser(Parser successor) {
-        this.setNextSuccessor(successor);
+        super(successor);
     }
 
     @Override
