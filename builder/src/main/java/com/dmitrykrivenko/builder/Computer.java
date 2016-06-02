@@ -6,49 +6,88 @@ package com.dmitrykrivenko.builder;
  */
 public class Computer {
 
-    private String display;
-    private String systemBlock;
-    private String manipulators;
+	private String display;
+	private String systemBlock;
+	private String manipulators;
 
-    /**
-     * @return the display
-     */
-    public String getDisplay() {
-        return display;
-    }
+	public Computer() {
+	}
 
-    /**
-     * @param display the display to set
-     */
-    public void setDisplay(String display) {
-        this.display = display;
-    }
+	private Computer(Builder builder) {
+		this.display = builder.display;
+		this.systemBlock = builder.systemBlock;
+		this.manipulators = manipulators;
+	}
 
-    /**
-     * @return the systemBlock
-     */
-    public String getSystemBlock() {
-        return systemBlock;
-    }
+	/**
+	 * @return the display
+	 */
+	public String getDisplay() {
+		return display;
+	}
 
-    /**
-     * @param systemBlock the systemBlock to set
-     */
-    public void setSystemBlock(String systemBlock) {
-        this.systemBlock = systemBlock;
-    }
+	/**
+	 * @param display the display to set
+	 */
+	public void setDisplay(String display) {
+		this.display = display;
+	}
 
-    /**
-     * @return the manipulators
-     */
-    public String getManipulators() {
-        return manipulators;
-    }
+	/**
+	 * @return the systemBlock
+	 */
+	public String getSystemBlock() {
+		return systemBlock;
+	}
 
-    /**
-     * @param manipulators the manipulators to set
-     */
-    public void setManipulators(String manipulators) {
-        this.manipulators = manipulators;
-    }
+	/**
+	 * @param systemBlock the systemBlock to set
+	 */
+	public void setSystemBlock(String systemBlock) {
+		this.systemBlock = systemBlock;
+	}
+
+	/**
+	 * @return the manipulators
+	 */
+	public String getManipulators() {
+		return manipulators;
+	}
+
+	/**
+	 * @param manipulators the manipulators to set
+	 */
+	public void setManipulators(String manipulators) {
+		this.manipulators = manipulators;
+	}
+
+	/**
+	 * Another example of Builder.
+	 */
+	public static class Builder {
+
+		private String display;
+		private String systemBlock;
+		private String manipulators;
+
+		public Builder display(String display) {
+			this.display = display;
+			return this;
+		}
+
+		public Builder systemBlock(String systemBlock) {
+			this.systemBlock = systemBlock;
+			return this;
+		}
+
+		public Builder manipulators(String manipulators) {
+			this.manipulators = manipulators;
+			return this;
+		}
+
+		public Computer build() {
+			return new Computer(this);
+		}
+
+	}
 }

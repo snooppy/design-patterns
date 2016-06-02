@@ -1,7 +1,7 @@
 package com.dmitrykrivenko.builder;
 
-import org.junit.Test;
 import org.junit.Assert;
+import org.junit.Test;
 
 /**
  *
@@ -9,25 +9,34 @@ import org.junit.Assert;
  */
 public class BuilderTest {
 
-    @Test
-    public void testBuilder() {
-        Director director = new Director();
+	@Test
+	public void testBuilder() {
+		Director director = new Director();
 
-        ComputerBuilder cheapComputerBuilder = new CheapComputerBuilder();
-        ComputerBuilder expensiveComputerBuilder = new ExpensiveComputerBuilder();
+		ComputerBuilder cheapComputerBuilder = new CheapComputerBuilder();
+		ComputerBuilder expensiveComputerBuilder = new ExpensiveComputerBuilder();
 
-        director.setComputerBuilder(cheapComputerBuilder);
-        director.constructComputer();
+		director.setComputerBuilder(cheapComputerBuilder);
+		director.constructComputer();
 
-        Computer computer = director.getComputer();
+		Computer computer = director.getComputer();
 
-        Assert.assertEquals("Cheap System Block", computer.getSystemBlock());
+		Assert.assertEquals("Cheap System Block", computer.getSystemBlock());
 
-        director.setComputerBuilder(expensiveComputerBuilder);
-        director.constructComputer();
+		director.setComputerBuilder(expensiveComputerBuilder);
+		director.constructComputer();
 
-        computer = director.getComputer();
+		computer = director.getComputer();
 
-        Assert.assertEquals("Expensive System Block", computer.getSystemBlock());
-    }
+		Assert.assertEquals("Expensive System Block", computer.getSystemBlock());
+	}
+
+	@Test
+	public void testBuilder2() {
+		Computer computer = new Computer.Builder().display("Powerfull computer")
+				.manipulators("Powerfull Mouse and Keyboard")
+				.systemBlock("Powerfull System Block")
+				.build();
+		Assert.assertEquals("Powerfull System Block", computer.getSystemBlock());
+	}
 }
