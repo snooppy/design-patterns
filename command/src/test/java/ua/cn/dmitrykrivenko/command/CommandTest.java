@@ -1,7 +1,8 @@
 package ua.cn.dmitrykrivenko.command;
 
-import org.junit.Test;
 import org.junit.Assert;
+import org.junit.Test;
+
 import ua.cn.dmitrykrivenko.command.light.Light;
 import ua.cn.dmitrykrivenko.command.light.LightOffCommand;
 import ua.cn.dmitrykrivenko.command.light.LightOnCommand;

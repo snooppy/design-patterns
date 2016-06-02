@@ -1,24 +1,25 @@
 package ua.cn.dmitrykrivenko.command.light;
 
 /**
+ * Receiver.
  *
  * @author Dmitry Krivenko <dmitrykrivenko@gmail.com>
  */
 public class Light {
 
-    private boolean onOff;
+	private boolean onOff;
 
-    public void on() {
-        onOff = true;
-        System.out.println("Light is on");
-    }
+	public void on() {
+		onOff = true;
+		System.out.println("Light is on");
+	}
 
-    public void off() {
-        onOff = false;
-        System.out.println("Light is off");
-    }
+	public void off() {
+		onOff = false;
+		System.out.println("Light is off");
+	}
 
-    public boolean getLightState() {
-        return onOff;
-    }
+	public boolean getLightState() {
+		return onOff;
+	}
 }
