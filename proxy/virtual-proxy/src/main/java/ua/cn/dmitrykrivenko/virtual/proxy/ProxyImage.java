@@ -7,12 +7,13 @@ package ua.cn.dmitrykrivenko.virtual.proxy;
 public class ProxyImage implements Image {
 
     private RealImage image;
-    private String filename;
+    private final String filename;
 
     public ProxyImage(final String fileName) {
         filename = fileName;
     }
 
+	@Override
     public void displayImage() {
         if (image != null) {
             image.displayImage();

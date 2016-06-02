@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
  */
 public class ManagersHandling implements InvocationHandler {
 
-    Developer employee;
+    private final Developer employee;
 
     public ManagersHandling(Developer employee) {
         this.employee = employee;

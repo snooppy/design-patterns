@@ -6,12 +6,13 @@ package ua.cn.dmitrykrivenko.virtual.proxy;
  */
 public class RealImage implements Image {
 
-    private String filename = null;
+    private final String filename;
 
     public RealImage(final String fileName) {
         filename = fileName;
     }
 
+	@Override
     public void displayImage() {
         System.out.println("Displaying " + filename);
     }
