@@ -11,9 +11,10 @@ import java.util.List;
 public class CompositeGraphic implements Graphic {
 
     //Collection of child graphics.
-    private List<Graphic> childGraphics = new ArrayList<Graphic>();
+    private final List<Graphic> childGraphics = new ArrayList<>();
 
     //Prints the graphic.
+	@Override
     public void print() {
         for (Graphic graphic : childGraphics) {
             graphic.print();

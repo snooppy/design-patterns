@@ -7,6 +7,7 @@ package ua.cn.dmitrykrivenko.composite;
  */
 public class Rectangle implements Graphic {
 
+	@Override
     public void print() {
         System.out.println("Rectangle");
     }
