@@ -1,6 +1,4 @@
-package ua.cn.dmitrykrivenko.strategy.fly.impl;
-
-import ua.cn.dmitrykrivenko.strategy.fly.FlyBehavior;
+package ua.cn.dmitrykrivenko.strategy.fly;
 
 /**
  *
@@ -8,6 +6,7 @@ import ua.cn.dmitrykrivenko.strategy.fly.FlyBehavior;
  */
 public class FlyNoWay implements FlyBehavior {
 
+    @Override
     public String fly() {
         String fly = "I can't fly";
         System.out.println(fly);

@@ -1,7 +1,7 @@
 package ua.cn.dmitrykrivenko.strategy;
 
-import ua.cn.dmitrykrivenko.strategy.fly.impl.FlyWithWings;
-import ua.cn.dmitrykrivenko.strategy.quack.impl.Squeack;
+import ua.cn.dmitrykrivenko.strategy.fly.FlyWithWings;
+import ua.cn.dmitrykrivenko.strategy.quack.Squeack;
 
 /**
  *
@@ -10,8 +10,7 @@ import ua.cn.dmitrykrivenko.strategy.quack.impl.Squeack;
 public class MallardDuck extends Duck {
 
     public MallardDuck() {
-        this.setFlyBehavior(new FlyWithWings());
-        this.setQuackBehavior(new Squeack());
+        super(new FlyWithWings(), new Squeack());
     }
 
     @Override

@@ -1,7 +1,7 @@
 package ua.cn.dmitrykrivenko.strategy;
 
-import ua.cn.dmitrykrivenko.strategy.fly.impl.FlyNoWay;
-import ua.cn.dmitrykrivenko.strategy.quack.impl.MuteQuack;
+import ua.cn.dmitrykrivenko.strategy.fly.FlyNoWay;
+import ua.cn.dmitrykrivenko.strategy.quack.MuteQuack;
 import org.junit.Assert;
 import org.junit.Test;
 

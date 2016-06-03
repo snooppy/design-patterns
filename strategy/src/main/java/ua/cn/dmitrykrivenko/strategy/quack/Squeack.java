@@ -1,6 +1,4 @@
-package ua.cn.dmitrykrivenko.strategy.quack.impl;
-
-import ua.cn.dmitrykrivenko.strategy.quack.QuackBehavoir;
+package ua.cn.dmitrykrivenko.strategy.quack;
 
 /**
  *
@@ -8,6 +6,7 @@ import ua.cn.dmitrykrivenko.strategy.quack.QuackBehavoir;
  */
 public class Squeack implements QuackBehavoir {
 
+    @Override
     public String quack() {
         String quack = "Squeack";
         System.out.println(quack);

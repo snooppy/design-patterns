@@ -14,6 +14,11 @@ public abstract class Duck {
 
     public abstract String display();
 
+    public Duck(FlyBehavior flyBehavior, QuackBehavoir quackBehavoir) {
+        this.flyBehavior = flyBehavior;
+        this.quackBehavoir = quackBehavoir;
+    }
+
     public String swim() {
         String swim = "All ducks float, even decoys!";
         System.out.println(swim);
