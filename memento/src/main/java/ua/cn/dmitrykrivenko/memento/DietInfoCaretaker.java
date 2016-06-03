@@ -6,13 +6,13 @@ package ua.cn.dmitrykrivenko.memento;
  */
 public class DietInfoCaretaker {
 
-    Object objMemento;
+    private Object objMemento;
 
-    public void saveState(DietInfo dietInfo) {
-        objMemento = dietInfo.save();
+    public void setMemento(Object objMemento) {
+        this.objMemento = objMemento;
     }
 
-    public void restoreState(DietInfo dietInfo) {
-        dietInfo.restore(objMemento);
+    public Object getMemento() {
+        return objMemento;
     }
 }

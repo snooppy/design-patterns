@@ -22,16 +22,18 @@ public class MementoTest {
         System.out.println(dietInfo);
 
         System.out.println("Saving state");
-        dietInfoCaretaker.saveState(dietInfo);
+        dietInfoCaretaker.setMemento(dietInfo.save());
 
         dietInfo.setDayNumberAndWeight(3, 92);
+        Assert.assertEquals(3, dietInfo.getDayNumber());
+        Assert.assertEquals(92, dietInfo.getWeight());
         System.out.println(dietInfo);
 
         System.out.println("Restoring saved state");
-        dietInfoCaretaker.restoreState(dietInfo);
+        dietInfo.restore(dietInfoCaretaker.getMemento());
         System.out.println(dietInfo);
 
-        Assert.assertTrue(dietInfo.getDayNumber() == 2);
-        Assert.assertTrue(dietInfo.getWeight() == 94);
+        Assert.assertEquals(2, dietInfo.getDayNumber());
+        Assert.assertEquals(94, dietInfo.getWeight());
     }
 }

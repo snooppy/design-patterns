@@ -23,7 +23,7 @@ public class DietInfo {
     }
 
     public Object save() {
-        return new Memento(personName, getDayNumber(), getWeight());
+        return new Memento(personName, dayNumber, weight);
     }
 
     public void restore(Object objMemento) {
@@ -59,9 +59,9 @@ public class DietInfo {
      */
     private class Memento {
 
-        String mementoPersonName;
-        int mementoDayNumber;
-        int mementoWeight;
+        private final String mementoPersonName;
+        private final int mementoDayNumber;
+        private final int mementoWeight;
 
         public Memento(String personName, int dayNumber, int weight) {
             mementoPersonName = personName;
