@@ -7,28 +7,35 @@
     <packaging>pom</packaging>
     <name>design-patterns</name>
     <modules>
-        <module>adapter</module>
+        <!--Creational patterns-->
+        <module>factory</module>
         <module>builder</module>
+        <module>prototype</module>
+        <module>singleton</module>
+        
+        <!--Structural patterns-->
+        <module>adapter</module>
         <module>bridge</module>
-        <module>chain-of-responsibility</module>
-        <module>command</module>
         <module>composite</module>
         <module>decorator</module>
         <module>facade</module>
-        <module>factory</module>
         <module>flyweight</module>
+        <module>proxy</module>
+        
+        <!--Behavioral patterns-->
+        <module>chain-of-responsibility</module>
+        <module>command</module>
         <module>interpreter</module>
-        <module>observer</module>
         <module>mediator</module>
         <module>memento</module>
-        <module>mvc</module>
-        <module>prototype</module>
-        <module>proxy</module>
-        <module>singleton</module>
+        <module>observer</module>
         <module>state</module>
         <module>strategy</module>
         <module>templatemethod</module>
         <module>visitor</module>
+       
+        <module>mvc</module>              
+       
     </modules>
     <dependencyManagement>
         <dependencies>

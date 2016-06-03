@@ -15,6 +15,6 @@ public class ObserverTest {
         ValueDisplay displayValue = new ValueDisplay(someData);
         someData.setValue(111);
 
-        Assert.assertTrue(displayValue.getValue() == 111);
+        Assert.assertEquals(111, displayValue.getValue());
     }
 }

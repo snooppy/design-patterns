@@ -1,4 +1,4 @@
-package ua.cn.dmitrykrivenko.observer.own;
+package ua.cn.dmitrykrivenko.observer;
 
 /**
  *

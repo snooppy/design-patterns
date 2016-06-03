@@ -2,7 +2,7 @@ package ua.cn.dmitrykrivenko.observer.java;
 
 import java.util.Observable;
 import java.util.Observer;
-import ua.cn.dmitrykrivenko.observer.own.Display;
+import ua.cn.dmitrykrivenko.observer.Display;
 
 /**
  *
@@ -18,6 +18,7 @@ public class ValueDisplay implements Observer, Display {
         observable.addObserver(this);
     }
 
+    @Override
     public void update(Observable o, Object arg) {
         if (o instanceof SomeData) {
             SomeData someData = (SomeData) o;
@@ -26,6 +27,7 @@ public class ValueDisplay implements Observer, Display {
         }
     }
 
+    @Override
     public void display() {
         System.out.println("Value: " + value);
     }
