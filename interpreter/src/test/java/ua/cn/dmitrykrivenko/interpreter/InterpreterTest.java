@@ -15,7 +15,7 @@ public class InterpreterTest {
     public void testInterpreter() {
         String expression = "w x z - +";//=x-z+w
         Evaluator sentence = new Evaluator(expression);
-        Map<String, Expression> variables = new HashMap<String, Expression>();
+        Map<String, Expression> variables = new HashMap<>();
 
         variables.put("w", new Number(10));
         variables.put("x", new Number(3));
