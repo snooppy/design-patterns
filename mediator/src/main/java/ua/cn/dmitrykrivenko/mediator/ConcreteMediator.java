@@ -8,16 +8,17 @@ import java.util.ArrayList;
  */
 public class ConcreteMediator implements Mediator {
 
-    private ArrayList<Colleague> colleagues;
+    private final ArrayList<Colleague> colleagues;
 
     public ConcreteMediator() {
-        colleagues = new ArrayList<Colleague>();
+        colleagues = new ArrayList<>();
     }
 
     public void addColleague(Colleague colleague) {
         colleagues.add(colleague);
     }
 
+    @Override
     public void send(String message, Colleague originator) {
         //let all other screens know that this screen has changed
         for (Colleague colleague : colleagues) {

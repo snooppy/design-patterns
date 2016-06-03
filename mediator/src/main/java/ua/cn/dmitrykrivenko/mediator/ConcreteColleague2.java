@@ -13,5 +13,6 @@ public class ConcreteColleague2 extends Colleague {
     @Override
     public void receive(String message) {
         System.out.println("Concrete Colleague 2 Received: " + message);
+        receivedMessage = message;
     }
 }

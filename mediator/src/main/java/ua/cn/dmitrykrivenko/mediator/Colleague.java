@@ -6,20 +6,23 @@ package ua.cn.dmitrykrivenko.mediator;
  */
 public abstract class Colleague {
 
-    private Mediator mediator;
+    private final Mediator mediator;
+    protected String receivedMessage;
 
     public Colleague(Mediator mediator) {
         this.mediator = mediator;
     }
 
-    //send a message via the mediator
     public void send(String message) {
         mediator.send(message, this);
     }
 
-    //get access to the mediator
     public Mediator getMediator() {
         return mediator;
+    }
+
+    public String getReceivedMessage() {
+        return receivedMessage;
     }
 
     public abstract void receive(String message);
