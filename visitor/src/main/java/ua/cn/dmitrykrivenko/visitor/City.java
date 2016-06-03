@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class City implements Element {
 
-    ArrayList<Element> places = new ArrayList<Element>();
+    ArrayList<Element> places = new ArrayList<>();
 
     public City() {
         places.add(new Museum());
