@@ -9,8 +9,8 @@ import java.awt.event.ActionListener;
  */
 public class CalculatorController {
 
-    private CalculatorView theView;
-    private CalculatorModel theModel;
+    private final CalculatorView theView;
+    private final CalculatorModel theModel;
 
     public CalculatorController(CalculatorView theView, CalculatorModel theModel) {
         this.theView = theView;
@@ -20,12 +20,11 @@ public class CalculatorController {
 
     class CalculateListener implements ActionListener {
 
+        @Override
         public void actionPerformed(ActionEvent e) {
-            int firstNumber;
-            int secondNumber;
             try {
-                firstNumber = theView.getFirstNumber();
-                secondNumber = theView.getSecondNumber();
+                int firstNumber = theView.getFirstNumber();
+                int secondNumber = theView.getSecondNumber();
                 int result = theModel.addTwoNumbers(firstNumber, secondNumber);
                 theView.setCalcResult(result);
             } catch (NumberFormatException ex) {
