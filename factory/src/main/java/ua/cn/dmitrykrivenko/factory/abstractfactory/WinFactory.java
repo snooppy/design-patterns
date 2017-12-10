@@ -11,7 +11,7 @@ public class WinFactory implements GUIFactory {
 		return new WinButton();
 	}
 
-	public Input creatInput() {
+	public Input createInput() {
 		return new WinInput();
 	}
 

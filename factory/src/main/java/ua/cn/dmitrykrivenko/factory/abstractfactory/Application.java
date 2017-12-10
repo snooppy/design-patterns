@@ -17,7 +17,7 @@ public class Application {
 
 	public void createElements() {
 		button = guiFactory.createButton();
-		input = guiFactory.creatInput();
+		input = guiFactory.createInput();
 	}
 
 	public Button getButton() {

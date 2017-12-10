@@ -9,6 +9,6 @@ public interface GUIFactory {
 	
 	Button createButton();
 	
-	Input creatInput();
+	Input createInput();
 
 }

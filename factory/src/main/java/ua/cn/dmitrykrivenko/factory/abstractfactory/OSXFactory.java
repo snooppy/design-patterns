@@ -11,7 +11,7 @@ public class OSXFactory implements GUIFactory {
 		return new OSXButton();
 	}
 
-	public Input creatInput() {
+	public Input createInput() {
 		return new OSXInput();
 	}
 
