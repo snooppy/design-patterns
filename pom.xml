@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ua.cn.dmitrykrivenko</groupId>
     <artifactId>design-patterns</artifactId>
@@ -7,35 +8,10 @@
     <packaging>pom</packaging>
     <name>design-patterns</name>
     <modules>
-        <!--Creational patterns-->
-        <module>factory</module>
-        <module>builder</module>
-        <module>prototype</module>
-        <module>singleton</module>
-        
-        <!--Structural patterns-->
-        <module>adapter</module>
-        <module>bridge</module>
-        <module>composite</module>
-        <module>decorator</module>
-        <module>facade</module>
-        <module>flyweight</module>
-        <module>proxy</module>
-        
-        <!--Behavioral patterns-->
-        <module>chain-of-responsibility</module>
-        <module>command</module>
-        <module>interpreter</module>
-        <module>mediator</module>
-        <module>memento</module>
-        <module>observer</module>
-        <module>state</module>
-        <module>strategy</module>
-        <module>templatemethod</module>
-        <module>visitor</module>
-       
-        <module>mvc</module>              
-       
+        <module>mvc</module>
+        <module>creational</module>
+        <module>structural</module>
+        <module>behavioral</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -44,11 +20,11 @@
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
                 <scope>test</scope>
-            </dependency>                                
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 </project>

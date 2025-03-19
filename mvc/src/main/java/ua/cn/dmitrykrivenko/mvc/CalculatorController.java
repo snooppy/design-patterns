@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author Dmitry Krivenko <dmitrykrivenko@gmail.com>
+ * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
 public class CalculatorController {
 

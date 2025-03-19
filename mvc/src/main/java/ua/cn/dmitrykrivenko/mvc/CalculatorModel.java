@@ -2,7 +2,7 @@ package ua.cn.dmitrykrivenko.mvc;
 
 /**
  *
- * @author Dmitry Krivenko <dmitrykrivenko@gmail.com>
+ * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
 public class CalculatorModel {
 

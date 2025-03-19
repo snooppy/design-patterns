@@ -2,11 +2,16 @@ package ua.cn.dmitrykrivenko.mvc;
 
 /**
  *
- * @author Dmitry Krivenko <dmitrykrivenko@gmail.com>
+ * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
 import java.awt.event.ActionListener;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class CalculatorView extends JFrame {
 
