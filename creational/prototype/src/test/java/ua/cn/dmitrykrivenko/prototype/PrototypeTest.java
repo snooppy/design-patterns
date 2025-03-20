@@ -11,8 +11,8 @@ public class PrototypeTest {
 
     @Test
     public void testPrototype() throws CloneNotSupportedException {
-        Cookie prot = new CoconutCookie();
-        CookieMachine cm = new CookieMachine(prot);
+        Cookie prototype = new CoconutCookie();
+        CookieMachine cm = new CookieMachine(prototype);
         Cookie tempCookie = cm.makeCookie();
 
         Assert.assertEquals(CoconutCookie.class, tempCookie.getClass());

@@ -5,11 +5,12 @@ package ua.cn.dmitrykrivenko.bridge;
  *
  * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
-public interface TV {
+public interface TV
+{
 
-	public void on();
+   void on();
 
-	public void off();
+   void off();
 
-	public void switchChannel(int channel);
+   void switchChannel(int channel);
 }

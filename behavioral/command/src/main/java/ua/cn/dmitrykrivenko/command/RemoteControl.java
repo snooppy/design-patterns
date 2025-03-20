@@ -7,9 +7,9 @@ package ua.cn.dmitrykrivenko.command;
  */
 public class RemoteControl {
 
-	Command[] onCommands;
-	Command[] offCommands;
-	Command undoCommand;
+	private final Command[] onCommands;
+	private final Command[] offCommands;
+	private Command undoCommand;
 
 	public RemoteControl() {
 		onCommands = new Command[5];

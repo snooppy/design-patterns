@@ -4,12 +4,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import ua.cn.dmitrykrivenko.factory.abstractfactory.Application;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.OSXButton;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.OSXFactory;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.OSXInput;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.WinButton;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.WinFactory;
-import ua.cn.dmitrykrivenko.factory.abstractfactory.WinInput;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.osx.OSXButton;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.osx.OSXFactory;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.osx.OSXInput;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.win.WinButton;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.win.WinFactory;
+import ua.cn.dmitrykrivenko.factory.abstractfactory.win.WinInput;
 
 /**
  *

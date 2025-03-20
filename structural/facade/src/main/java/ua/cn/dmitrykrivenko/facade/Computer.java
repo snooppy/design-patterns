@@ -7,9 +7,9 @@ package ua.cn.dmitrykrivenko.facade;
  */
 public class Computer {
 
-    private CPU processor;
-    private Memory ram;
-    private HardDrive hd;
+    private final CPU processor;
+    private final Memory ram;
+    private final HardDrive hd;
 
     public Computer() {
         this.processor = new CPU();

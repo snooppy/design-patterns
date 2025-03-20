@@ -6,5 +6,5 @@ package ua.cn.dmitrykrivenko.composite;
  */
 public interface Graphic {
 
-    public void print();
+     void print();
 }

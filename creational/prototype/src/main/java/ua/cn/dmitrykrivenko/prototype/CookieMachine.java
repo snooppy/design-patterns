@@ -6,13 +6,13 @@ package ua.cn.dmitrykrivenko.prototype;
  */
 public class CookieMachine {
 
-    private Cookie cookie; // Could have been a private Cloneable cookie.
+    private final Cookie cookie; // Could have been a private Cloneable cookie.
 
     public CookieMachine(Cookie cookie) {
         this.cookie = cookie;
     }
 
     public Cookie makeCookie() throws CloneNotSupportedException {
-        return (Cookie) this.cookie.clone();
+        return this.cookie.clone();
     }
 }

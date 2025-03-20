@@ -4,11 +4,12 @@ package ua.cn.dmitrykrivenko.strategy.quack;
  *
  * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
-public class Squeack implements QuackBehavoir {
+public class Squeak implements QuackBehavior
+{
 
     @Override
     public String quack() {
-        String quack = "Squeack";
+        String quack = "Squeak";
         System.out.println(quack);
         return quack;
     }

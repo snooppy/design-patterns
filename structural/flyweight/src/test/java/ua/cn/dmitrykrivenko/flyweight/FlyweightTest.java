@@ -13,11 +13,12 @@ public class FlyweightTest {
     public void testFlyweight() {
         CharacterFlyweightFactory factory = new CharacterFlyweightFactory();
 
-        EnglishCharacter c = factory.getCharacter(1);//creating of new object
+        EnglishCharacter c = factory.getCharacter(1);
         Assert.assertEquals('A', c.printCharacter());
         Assert.assertEquals('B', factory.getCharacter(2).printCharacter());
         Assert.assertEquals('C', factory.getCharacter(3).printCharacter());
 
-        Assert.assertSame(factory.getCharacter(1), c);//getting already created object
+        //getting already created object
+        Assert.assertSame(factory.getCharacter(1), c);
     }
 }

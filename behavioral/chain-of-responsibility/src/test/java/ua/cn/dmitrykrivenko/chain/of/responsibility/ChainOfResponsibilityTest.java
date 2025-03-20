@@ -10,10 +10,10 @@ import org.junit.Assert;
  */
 public class ChainOfResponsibilityTest {
 
-    Parser xmlParser;
-    Parser csvParser;
-    Parser jsonParser;
-    Parser textParser;
+    private Parser xmlParser;
+    private Parser csvParser;
+    private Parser jsonParser;
+    private Parser textParser;
 
     @Before
     public void setUp() {
@@ -21,7 +21,6 @@ public class ChainOfResponsibilityTest {
         csvParser = new CsvParser(xmlParser);
         jsonParser = new JsonParser(csvParser);
         textParser = new TextParser(jsonParser);
-
     }
 
     @Test

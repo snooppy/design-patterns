@@ -4,7 +4,8 @@ package ua.cn.dmitrykrivenko.state;
  *
  * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
-public class StateA implements Statelike {
+public class StateA implements StateLike
+{
 
     @Override
     public void writeName(StateContext stateContext, String name) {

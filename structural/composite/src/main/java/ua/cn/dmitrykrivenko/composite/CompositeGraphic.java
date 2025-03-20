@@ -14,7 +14,7 @@ public class CompositeGraphic implements Graphic {
     private final List<Graphic> childGraphics = new ArrayList<>();
 
     //Prints the graphic.
-	@Override
+    @Override
     public void print() {
         for (Graphic graphic : childGraphics) {
             graphic.print();

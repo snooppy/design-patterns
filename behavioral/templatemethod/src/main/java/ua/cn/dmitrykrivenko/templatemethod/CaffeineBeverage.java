@@ -4,7 +4,8 @@ package ua.cn.dmitrykrivenko.templatemethod;
  *
  * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
-public abstract class CoffeineBeverage {
+public abstract class CaffeineBeverage
+{
 
     final void prepareRecipe() {
         boilWater();

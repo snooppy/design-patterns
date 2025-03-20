@@ -20,8 +20,7 @@ public class ValueDisplay implements Observer, Display {
 
     @Override
     public void update(Observable o, Object arg) {
-        if (o instanceof SomeData) {
-            SomeData someData = (SomeData) o;
+        if (o instanceof SomeData someData) {
             value = someData.getValue();
             display();
         }

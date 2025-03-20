@@ -6,9 +6,9 @@ package ua.cn.dmitrykrivenko.visitor;
  */
 public interface Visitor {
 
-    public void visit(City city);
+    void visit(City city);
 
-    public void visit(Museum museum);
+    void visit(Museum museum);
 
-    public void visit(Park park);
+    void visit(Park park);
 }

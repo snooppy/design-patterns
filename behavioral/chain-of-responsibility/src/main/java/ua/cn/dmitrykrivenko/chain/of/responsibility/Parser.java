@@ -6,16 +6,16 @@ package ua.cn.dmitrykrivenko.chain.of.responsibility;
  */
 public class Parser {
 
-    private Parser successor;
+   private Parser successor;
 
-	public Parser() {
-	}
+   public Parser() {
+   }
 
-	public Parser(Parser successor) {
-		this.successor = successor;
-	}
+   public Parser(Parser successor) {
+      this.successor = successor;
+   }
 
-    public boolean parse(String fileName) {
+   public boolean parse(String fileName) {
         if (getSuccessor() != null) {
             return getSuccessor().parse(fileName);
         } else {
@@ -26,7 +26,6 @@ public class Parser {
 
     protected boolean canHandleFile(String fileName, String format) {
         return (fileName == null) || (fileName.endsWith(format));
-
     }
 
     public Parser getSuccessor() {

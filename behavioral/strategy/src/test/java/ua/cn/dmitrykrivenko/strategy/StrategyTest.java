@@ -13,10 +13,10 @@ public class StrategyTest {
     @Test
     public void testStrategy() {
         Duck mallardDuck = new MallardDuck();
-        Assert.assertEquals("I'm a real Mallar Duck!", mallardDuck.display());
+        Assert.assertEquals("I'm a real Mallard Duck!", mallardDuck.display());
 
         Assert.assertEquals("I'm flying!", mallardDuck.performFly());
-        Assert.assertEquals("Squeack", mallardDuck.performQuack());
+        Assert.assertEquals("Squeak", mallardDuck.performQuack());
 
         Assert.assertEquals("All ducks float, even decoys!", mallardDuck.swim());
 

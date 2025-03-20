@@ -13,22 +13,13 @@ public class CharacterFlyweightFactory {
     public EnglishCharacter getCharacter(int characterCode) {
         EnglishCharacter character = charactersPool.get(characterCode);
         if (character == null) {
-            switch (characterCode) {
-                case 1: {
-                    character = new CharacterA();
-                    break;
-                }
-                case 2: {
-                    character = new CharacterB();
-                    break;
-                }
-                case 3: {
-                    character = new CharacterC();
-                    break;
-                }
-				default:
-					throw new IllegalArgumentException("Unsupported character code: "+characterCode);
-            }
+            character = switch (characterCode) {
+                case 1 -> new CharacterA();
+                case 2 -> new CharacterB();
+                case 3 -> new CharacterC();
+                default -> throw new IllegalArgumentException("Unsupported character code: "
+                         + characterCode);
+            };
             charactersPool.put(characterCode, character);
         }
         return character;

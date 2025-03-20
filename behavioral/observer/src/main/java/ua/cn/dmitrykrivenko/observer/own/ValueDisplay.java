@@ -9,11 +9,9 @@ import ua.cn.dmitrykrivenko.observer.Display;
 public class ValueDisplay implements Observer, Display {
 
     private int value;
-    private final Subject subject;
 
-    public ValueDisplay(Subject s) {
-        subject = s;
-        subject.registerObserver(this);
+   public ValueDisplay(Subject s) {
+      s.registerObserver(this);
     }
 
     @Override

@@ -7,7 +7,7 @@ package ua.cn.dmitrykrivenko.decorator;
 public class HouseBlend extends Beverage {
 
     public HouseBlend() {
-        description = "House Blend cofee";
+        description = "House Blend coffee";
     }
 
     @Override

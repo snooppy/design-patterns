@@ -18,7 +18,7 @@ public class AdapterTest {
 
     @Before
     public void setUp() {
-        v = new Vector<String>();
+        v = new Vector<>();
         testStr = "Test Adapter";
         v.add(testStr);
     }
@@ -26,7 +26,7 @@ public class AdapterTest {
     @Test
     public void testAdapter() {
         Enumeration<String> enumeration = v.elements();
-        Iterator iterator = new EnumerationIteratorAdapter(enumeration);
+        Iterator<String> iterator = new EnumerationIteratorAdapter(enumeration);
 
         Assert.assertTrue(iterator.hasNext());
         Assert.assertEquals(testStr, iterator.next());
@@ -35,7 +35,7 @@ public class AdapterTest {
     @Test(expected = UnsupportedOperationException.class)
     public void testAdapter_shouldThrowUnsupportedOperationException() {
         Enumeration<String> enumeration = v.elements();
-        Iterator iterator = new EnumerationIteratorAdapter(enumeration);
+        Iterator<String> iterator = new EnumerationIteratorAdapter(enumeration);
         iterator.remove();
     }
 }

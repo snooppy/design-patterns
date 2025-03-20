@@ -1,6 +1,6 @@
 package ua.cn.dmitrykrivenko.strategy;
 
-import ua.cn.dmitrykrivenko.strategy.quack.QuackBehavoir;
+import ua.cn.dmitrykrivenko.strategy.quack.QuackBehavior;
 import ua.cn.dmitrykrivenko.strategy.fly.FlyBehavior;
 
 /**
@@ -10,13 +10,13 @@ import ua.cn.dmitrykrivenko.strategy.fly.FlyBehavior;
 public abstract class Duck {
 
     private FlyBehavior flyBehavior;
-    private QuackBehavoir quackBehavoir;
+    private QuackBehavior quackBehavior;
 
     public abstract String display();
 
-    public Duck(FlyBehavior flyBehavior, QuackBehavoir quackBehavoir) {
+    public Duck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
         this.flyBehavior = flyBehavior;
-        this.quackBehavoir = quackBehavoir;
+        this.quackBehavior = quackBehavior;
     }
 
     public String swim() {
@@ -30,14 +30,14 @@ public abstract class Duck {
     }
 
     public String performQuack() {
-        return quackBehavoir.quack();
+        return quackBehavior.quack();
     }
 
     public void setFlyBehavior(FlyBehavior flyBehavior) {
         this.flyBehavior = flyBehavior;
     }
 
-    public void setQuackBehavior(QuackBehavoir quackBehavoir) {
-        this.quackBehavoir = quackBehavoir;
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
     }
 }

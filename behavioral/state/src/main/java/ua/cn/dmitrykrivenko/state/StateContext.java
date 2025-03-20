@@ -6,13 +6,13 @@ package ua.cn.dmitrykrivenko.state;
  */
 public final class StateContext {
 
-    private Statelike myState;
+    private StateLike myState;
 
     public StateContext() {
         setState(new StateA());
     }
 
-    public void setState(final Statelike newState) {
+    public void setState(final StateLike newState) {
         myState = newState;
     }
 

@@ -10,16 +10,16 @@ public class DecoratorTest {
 
     @Test
     public void testDecorator() {
-        Beverage expresso = new Expresso();
-        System.out.println(expresso.getDescription() + " " + expresso.getCost());
-        Assert.assertEquals("Expresso", expresso.getDescription());
+        Beverage espresso = new Espresso();
+        System.out.println(espresso.getDescription() + " " + espresso.getCost());
+        Assert.assertEquals("Espresso", espresso.getDescription());
 
-        expresso = new Milk(expresso);
-        System.out.println(expresso.getDescription() + " " + expresso.getCost());
-        Assert.assertEquals("Expresso, Milk", expresso.getDescription());
+        Beverage espressoWithMilk = new Milk(espresso);
+        System.out.println(espressoWithMilk.getDescription() + " " + espressoWithMilk.getCost());
+        Assert.assertEquals("Espresso, Milk", espressoWithMilk.getDescription());
 
-        expresso = new Whip(expresso);
-        System.out.println(expresso.getDescription() + " " + expresso.getCost());
-        Assert.assertEquals("Expresso, Milk, Whip", expresso.getDescription());
+        Beverage whipEspressoWithMilk = new Whip(espressoWithMilk);
+        System.out.println(whipEspressoWithMilk.getDescription() + " " + whipEspressoWithMilk.getCost());
+        Assert.assertEquals("Espresso, Milk, Whip", whipEspressoWithMilk.getDescription());
     }
 }

@@ -6,5 +6,5 @@ package ua.cn.dmitrykrivenko.visitor;
  */
 public interface Element {
 
-    public void accept(Visitor visitor);
+    void accept(Visitor visitor);
 }

@@ -27,8 +27,7 @@ public class DietInfo {
     }
 
     public void restore(Object objMemento) {
-        if (objMemento instanceof Memento) {
-            Memento memento = (Memento) objMemento;
+        if (objMemento instanceof Memento memento) {
             personName = memento.mementoPersonName;
             dayNumber = memento.mementoDayNumber;
             weight = memento.mementoWeight;
@@ -57,7 +56,7 @@ public class DietInfo {
     /**
      * Memento - object that stores the saved state of the originator.
      */
-    private class Memento {
+    private static class Memento {
 
         private final String mementoPersonName;
         private final int mementoDayNumber;

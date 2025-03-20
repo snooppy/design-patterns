@@ -6,7 +6,7 @@ package ua.cn.dmitrykrivenko.mediator;
  */
 public interface Mediator {
 
-    void addColleague(Colleague collegue);
+    void addColleague(Colleague colleague);
 
     void send(String message, Colleague colleague);
 }

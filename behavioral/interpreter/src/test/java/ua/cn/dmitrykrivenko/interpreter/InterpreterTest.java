@@ -13,7 +13,7 @@ public class InterpreterTest {
 
     @Test
     public void testInterpreter() {
-        String expression = "w x z - +";//=x-z+w
+        String expression = "w x z - +"; //=x-z+w
         Evaluator sentence = new Evaluator(expression);
         Map<String, Expression> variables = new HashMap<>();
 

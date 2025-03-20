@@ -6,7 +6,7 @@ package ua.cn.dmitrykrivenko.decorator;
  */
 public class Milk extends BeverageDecorator {
 
-    Beverage beverage;
+    private final Beverage beverage;
 
     public Milk(Beverage b) {
         beverage = b;

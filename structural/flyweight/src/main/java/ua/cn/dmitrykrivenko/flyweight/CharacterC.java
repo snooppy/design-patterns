@@ -7,14 +7,14 @@ package ua.cn.dmitrykrivenko.flyweight;
 public class CharacterC extends EnglishCharacter {
 
     public CharacterC() {
-        simbol = 'C';
+        symbol = 'C';
         width = 40;
         height = 50;
     }
 
     @Override
     public char printCharacter() {
-        System.out.println("Simbol = " + simbol + " Width = " + width + " Height = " + height);
-        return simbol;
+        System.out.println("Symbol = " + symbol + " Width = " + width + " Height = " + height);
+        return symbol;
     }
 }

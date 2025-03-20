@@ -4,7 +4,8 @@ package ua.cn.dmitrykrivenko.templatemethod;
  *
  * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
-public class Tea extends CoffeineBeverage {
+public class Tea extends CaffeineBeverage
+{
 
     @Override
     public void brew() {

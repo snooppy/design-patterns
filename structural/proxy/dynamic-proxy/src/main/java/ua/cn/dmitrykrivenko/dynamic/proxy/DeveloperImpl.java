@@ -6,48 +6,48 @@ package ua.cn.dmitrykrivenko.dynamic.proxy;
  */
 public class DeveloperImpl implements Developer {
 
-    String name;
-    String salary;
-    int rating;
-    String role;
+   private String name;
+   private String salary;
+   private int rating;
+   private String role;
 
-	@Override
-    public String getName() {
-        return name;
-    }
+   @Override
+   public String getName() {
+      return name;
+   }
 
-	@Override
-    public String getSalary() {
+   @Override
+   public String getSalary() {
         return salary;
     }
 
-	@Override
-    public String getRole() {
-        return role;
-    }
+   @Override
+   public String getRole() {
+      return role;
+   }
 
-	@Override
-    public int getRating() {
-        return rating;
-    }
+   @Override
+   public int getRating() {
+      return rating;
+   }
 
-	@Override
-    public void setName(String name) {
-        this.name = name;
-    }
+   @Override
+   public void setName(String name) {
+      this.name = name;
+   }
 
-	@Override
-    public void setSalary(String salary) {
-        this.salary = salary;
-    }
+   @Override
+   public void setSalary(String salary) {
+      this.salary = salary;
+   }
 
-	@Override
-    public void setRole(String role) {
-        this.role = role;
-    }
+   @Override
+   public void setRole(String role) {
+      this.role = role;
+   }
 
-	@Override
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
+   @Override
+   public void setRating(int rating) {
+      this.rating = rating;
+   }
 }

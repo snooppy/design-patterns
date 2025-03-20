@@ -4,7 +4,8 @@ package ua.cn.dmitrykrivenko.templatemethod;
  *
  * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
-public class Coffee extends CoffeineBeverage {
+public class Coffee extends CaffeineBeverage
+{
 
     private boolean condiments;
 

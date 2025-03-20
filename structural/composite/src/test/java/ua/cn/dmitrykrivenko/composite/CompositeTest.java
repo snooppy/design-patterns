@@ -10,11 +10,9 @@ public class CompositeTest {
 
     @Test
     public void testComposite() {
-        //Initialize four ellipses
         Ellipse ellipse = new Ellipse();
         Rectangle rectangle = new Rectangle();
 
-        //Initialize three composite graphics
         CompositeGraphic graphic = new CompositeGraphic();
         CompositeGraphic graphic1 = new CompositeGraphic();
         CompositeGraphic graphic2 = new CompositeGraphic();

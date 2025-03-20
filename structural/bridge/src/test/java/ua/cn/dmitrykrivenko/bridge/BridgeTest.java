@@ -12,24 +12,24 @@ public class BridgeTest {
     public void testBridge() {
         TV tvSony = new SonyTV();
 
-        LogitechRemoteControl lrc = new LogitechRemoteControl(tvSony, 30);
-        lrc.setStation(15);
-        lrc.turnOn();
+        LogitechRemoteControl remoteControl = new LogitechRemoteControl(tvSony, 30);
+        remoteControl.setStation(15);
+        remoteControl.turnOn();
 
-        Assert.assertTrue(lrc.nextChannel() == 16);
-        Assert.assertTrue(lrc.previousChannel() == 15);
+       Assert.assertEquals(16, remoteControl.nextChannel());
+       Assert.assertEquals(15, remoteControl.previousChannel());
 
-        lrc.turnOff();
+        remoteControl.turnOff();
 
         TV tvSamsung = new SamsungTV();
 
-        lrc = new LogitechRemoteControl(tvSamsung, 20);
-        lrc.setStation(19);
-        lrc.turnOn();
+        remoteControl = new LogitechRemoteControl(tvSamsung, 20);
+        remoteControl.setStation(19);
+        remoteControl.turnOn();
 
-        Assert.assertTrue(lrc.nextChannel() == 0);
-        Assert.assertTrue(lrc.previousChannel() == 19);
+       Assert.assertEquals(0, remoteControl.nextChannel());
+       Assert.assertEquals(19, remoteControl.previousChannel());
 
-        lrc.turnOff();
+        remoteControl.turnOff();
     }
 }

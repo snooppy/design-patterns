@@ -4,25 +4,25 @@ import java.util.Enumeration;
 import java.util.Iterator;
 
 /**
+ * Adapts Enumeration to Iterator.
  *
  * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
-public class EnumerationIteratorAdapter implements Iterator {
+public class EnumerationIteratorAdapter implements Iterator<String> {
 
-    private final Enumeration enumeration;
+    private final Enumeration<String> enumeration;
 
-    public EnumerationIteratorAdapter(Enumeration enumeration) {
+    public EnumerationIteratorAdapter(Enumeration<String> enumeration) {
         this.enumeration = enumeration;
     }
 
 	@Override
     public boolean hasNext() {
         return enumeration.hasMoreElements();
-
     }
 
 	@Override
-    public Object next() {
+    public String next() {
         return enumeration.nextElement();
     }
 

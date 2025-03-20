@@ -6,7 +6,7 @@ package ua.cn.dmitrykrivenko.decorator;
  */
 public class Whip extends BeverageDecorator {
 
-    Beverage beverage;
+    private final Beverage beverage;
 
     public Whip(Beverage b) {
         beverage = b;

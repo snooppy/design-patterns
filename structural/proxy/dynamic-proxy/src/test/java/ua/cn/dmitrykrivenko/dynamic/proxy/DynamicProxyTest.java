@@ -80,7 +80,6 @@ public class DynamicProxyTest {
 				employee.getClass().getClassLoader(),
 				employee.getClass().getInterfaces(),
 				new DeveloperHandling(employee));
-
 	}
 
 	private Developer getManagerProxy(Developer employee) {

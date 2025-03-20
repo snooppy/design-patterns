@@ -4,10 +4,10 @@ package ua.cn.dmitrykrivenko.decorator;
  *
  * @author Dmytro Kryvenko <dmitrykrivenko@gmail.com>
  */
-public class Expresso extends Beverage {
+public class Espresso extends Beverage {
 
-    public Expresso() {
-        description = "Expresso";
+    public Espresso() {
+        description = "Espresso";
     }
 
     @Override
